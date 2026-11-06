@@ -1,0 +1,6 @@
+node_modules/
+*.log
+
+# Internal planning notes, not part of the public project
+PRD.md
+archive/

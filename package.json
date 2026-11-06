@@ -1,0 +1,17 @@
+{
+  "name": "versionbisect",
+  "version": "0.1.0",
+  "description": "Find the npm release where a bug reproduction's output changed.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "bin": {
+    "versionbisect": "src/cli.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}
