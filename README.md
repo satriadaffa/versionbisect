@@ -22,7 +22,7 @@ This shows when the output changed, not whether the change is a bug.
 Requires Node.js 20 or newer. There are no dependencies to install, and the package is not on npm yet.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/satriadaffa/versionbisect.git
 cd versionbisect
 node src/cli.mjs <package> <repro.mjs> --good <version> [--bad <version>] [--sweep]
 ```
