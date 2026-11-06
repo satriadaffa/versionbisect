@@ -61,6 +61,8 @@ No assertion is needed, because versions are compared by exit status, stdout, an
 | [zod#6545](https://github.com/colinhacks/zod/issues/6545), 4.4.3 to 4.5.4 | Changed at 4.5.0 | Matches the issue |
 | zod#6659, 4.0.0 to 4.6.6 | Changed at 4.0.6, with a warning about further changes | A full sweep of 57 versions found changes at 4.0.6 and 4.6.6 |
 | [hono#5544](https://github.com/honojs/hono/issues/5544), 4.0.0 to 4.13.13 | Changed at 4.1.4 | A full sweep of 4.0.0 to 4.2.0 agrees |
+| [valibot#436](https://github.com/open-circle/valibot/issues/436), 0.20.1 to 0.28.1 | Changed at 0.22.0 | A full sweep of 12 versions agrees |
+| [defu#119](https://github.com/unjs/defu/issues/119), 6.1.2 to 6.1.3 (reproduction rewritten as one file) | Changed at 6.1.3 | Matches the issue. A full sweep shows the result returned at 6.1.4 |
 | Stable control | No change found | Expected |
 | Random output control | Reported as unstable | Expected |
 
@@ -72,6 +74,7 @@ This is a small sample, not a benchmark. The reproductions are in [`examples/`](
 - **It can miss changes.** It assumes the checked versions are representative, so behaviour that appears and disappears between two checked versions can be missed. Use `--sweep` to test everything.
 - **Noisy output looks like a change.** Timestamps, random values, and changed error wording all count.
 - **Older versions may not fit.** A missing export or module counts as a different result, and it may not be the bug.
+- **Type-only bugs are invisible.** TypeScript types are erased at runtime, so a regression that only shows up in `tsc` produces no change here.
 - **Limited scope for now.** Single-file Node.js reproductions only, with no browser support and no reproduction repositories.
 
 ## Security
